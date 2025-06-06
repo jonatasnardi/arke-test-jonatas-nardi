@@ -1,0 +1,42 @@
+<div class="wrapper-home">
+  <atom-title [title]="'Jonatas Nardi - Test'"></atom-title>
+
+  <div class="box-cards">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="field">
+        <atom-input
+          class="card-item"
+          [label]="'Create task'"
+          [placeholder]="'Type here...'"
+          [formGroup]="form"
+          [name]="'task'"
+        >
+        </atom-input>
+        <atom-button
+          [color]="'primary'"
+          [type]="'submit'"
+          [text]="'Create'"
+          [formGroup]="form"
+        >
+        </atom-button>
+      </div>
+    </form>
+
+    <organism-task-list *ngIf="hasTasks;else noContent">
+      <mat-grid-tile *ngFor="let item of stateService.getTasks()">
+        <molecule-task 
+          class="card-item" 
+          [item]="item"
+          (onChangeCompleted)="onChangeCompleted(item, $event)"
+          (onDeleteItem)="onDeleteItem(item)"
+          (onEditItem)="onEditItem(item)"
+        >
+        </molecule-task>
+      </mat-grid-tile>
+    </organism-task-list>
+  </div>
+</div>
+
+<ng-template #noContent>
+  <p>No tasks found. To get started, create a task above.</p>
+</ng-template>

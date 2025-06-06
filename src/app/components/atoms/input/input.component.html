@@ -1,0 +1,4 @@
+<mat-form-field [formGroup]="formGroup">
+  <mat-label>{{ label }}</mat-label>
+  <input matInput [placeholder]="placeholder" [value]="stateService.getSelectedTask() ? stateService.getSelectedTask()?.name : ''" [formControlName]="name">
+</mat-form-field>

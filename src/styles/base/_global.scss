@@ -1,0 +1,30 @@
+@import "../_variables.scss";
+@import "../_mixins.scss";
+
+.only-mobile {
+  display: none;
+
+  @include xs() {
+    display: block;
+  }
+}
+
+.only-desktop {
+  display: block;
+
+  @include xs() {
+    display: none !important;
+  }
+}
+
+.hide-mobile {
+  @include xs() {
+    display: none;
+  }
+}
+
+.hide-desktop {
+  @include min-width(768px) {
+    display: none;
+  }
+}

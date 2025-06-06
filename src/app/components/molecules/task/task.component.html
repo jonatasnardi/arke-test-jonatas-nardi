@@ -1,0 +1,13 @@
+<div class="task">
+  <div class="task-body">
+    <div class="box-content">
+      <mat-checkbox [checked]="item?.completed" (change)="onChange($event.checked)"></mat-checkbox>
+      <h4 class="task-title">{{ item?.name }}</h4>
+    </div>
+    <div class="box-content">
+      <mat-icon *ngIf="!isSelectedTask" fontIcon="edit" (click)="onEdit()"></mat-icon>
+      <span class="cancel" *ngIf="isSelectedTask" (click)="onCancelEdit()">Cancel edit</span>
+      <span [ngClass]="{'visible': item?.completed}" (click)="onDelete()" class="delete">×</span>
+    </div>
+  </div>
+</div>

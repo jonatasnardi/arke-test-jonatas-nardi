@@ -1,0 +1,76 @@
+@import '../../../../styles/shared';
+
+.task {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 6px;
+  height: 40px;
+  transition: 0.3s;
+  background: $gray-light;
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  .task-body {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .box-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .task-title {
+    text-align: center;
+    color: $secondary;
+    font-weight: bold;
+    margin: 0;
+
+    @include xs() {
+      font-size: 13px;
+    }
+  }
+
+  .task-text {
+    font-weight: 500;
+    color: $secondary;
+    text-align: center;
+    max-width: 100%;
+
+    @include xs() {
+      font-size: 12px;
+    }
+  }
+
+  mat-icon {
+    color: $secondary;
+    cursor: pointer;
+  }
+
+  .delete {
+    width: 12px;
+    visibility: hidden;
+    color: $red;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.visible {
+      visibility: visible;
+    }
+  }
+
+  .cancel {
+    color: $secondary;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+}

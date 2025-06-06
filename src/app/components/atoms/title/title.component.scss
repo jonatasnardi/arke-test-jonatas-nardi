@@ -1,0 +1,14 @@
+@import '../../../../styles/shared';
+
+.title {
+  margin: 30px 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: $primary;
+  gap: 10px;
+  display: flex;
+
+  @include xs() {
+    font-size: 24px;
+  }
+}

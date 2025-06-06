@@ -1,0 +1,32 @@
+@import "../_variables.scss";
+@import "../_mixins.scss";
+
+.ngx-pagination {
+  color: $primary-dark;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+
+  .disabled {
+    color: $primary-light !important;
+  }
+
+  .current {
+    background: $primary-dark !important;
+  }
+
+  li {
+    a {
+      color: $primary-dark;
+
+      &:hover {
+        background: $primary-light !important;
+      }
+    }
+  }
+}
+
+.mat-option-text {
+  font-family: $fira-sans;
+  color: var(--zk-textColor-body-base);
+}
