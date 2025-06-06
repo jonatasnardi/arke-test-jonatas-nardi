@@ -1,4 +1,4 @@
-# arke-test-jonatas-nardi
+# To do list (Jonatas Nardi)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
 Use Node version "^18.13.0 || >=20.9.0"   
